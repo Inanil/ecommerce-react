@@ -1,0 +1,107 @@
+.products-container {
+  padding: var(--padding-mobile);
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap:20px;
+  margin:60px 0
+}
+
+.card-product {
+  width: min(100%, 300px);
+  border-radius:20px;
+  background-color: var(--primary-color);
+  transition: box-shadow 200ms ease;
+  border: 1px solid var(--primary-color);
+}
+.card-product:hover {
+  box-shadow: 1px 1px 10px var(--border-color);
+  transition: box-shadow 200ms ease;
+}
+
+.card-product_header {
+  height:200px;
+  padding:20px;
+  border-radius:18px;
+  position: relative;
+  background-color: var(--color-primary-text);
+}
+
+.card-product_img {
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  transition: opacity 400ms ease-out;
+  opacity:1;
+  z-index:2;
+}
+
+.card-product_header:hover .card-product_img {
+  opacity: 0;
+  transition: opacity 400ms ease-out;
+}
+
+.card-product_header:hover .card-product_img-back {
+  opacity: 1;
+  transition: opacity 400ms ease-out;
+}
+
+.card-product_img-back {
+  position: absolute;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  object-fit: contain;
+ 
+  opacity: 0;
+  transition: opacity 400ms ease-out;
+}
+
+.card-product_body {
+  padding: 20px;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.card-product_title {
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:12px;
+  height:42px;
+  color:var(--color-primary-text);
+}
+
+.card-product_price-label {
+  font-size: 16px;
+  color: var(--secondary-color);
+  position:relative;
+  left: -5px;
+  margin-bottom:5px;
+}
+
+.card-product_price-number {
+  font-size:22px;
+  font-weight:400;
+  color: var(--color-primary-text);
+}
+
+.card-product_btn {
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+  width: 45px;
+  border-radius: 50%;
+  aspect-ratio: 1;
+ border: none;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+  box-shadow: 1px 1px 10px 0 var(--border-color);
+  font-size: 20px;
+  transition: transform 200ms ease;
+}
+
+.card-product_btn:hover{
+  transform: scale(1.2);
+  transition: transform 200ms ease;
+}
+
