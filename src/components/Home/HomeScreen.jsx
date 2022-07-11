@@ -4,12 +4,15 @@ import InputSearch from './InputSearch'
 import ProductCard from './ProductCard'
 import './style/homeScreen.css'
 import { useEffect, useState } from 'react'
+import { useParams }from 'react-router-dom'
 import CategoriesScreen from './CategoriesScreen'
 
 const HomeScreen=()=> {
-
+   
 
   const products=useSelector(state=>state.products)
+
+  // const {name}=useParams
    
   
   const [searchProduct, setSearchProduct] = useState()
@@ -20,7 +23,14 @@ const HomeScreen=()=> {
   }, [searchProduct])
 
 
-  console.log(filterProduct)
+  // useEffect(() => {
+  //   if(name){
+  //    setFilterCategories(products?.filter(e => e.category.name===name))
+  //   }else{
+  //     setFilterCategories(products)
+  //   }
+   
+  // }, [name ])
 
   return (
     <div className='home'>

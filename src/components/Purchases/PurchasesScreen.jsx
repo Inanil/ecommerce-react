@@ -17,7 +17,7 @@ const PurchasesScreen = () => {
       .catch(err=>console.log(err))
   },[])
 
-  console.log(purchases)
+
 
   return (
     <div className='purchases'>
